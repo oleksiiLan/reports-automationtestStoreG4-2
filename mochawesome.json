@@ -1,0 +1,321 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 8,
+    "passes": 6,
+    "pending": 2,
+    "failures": 0,
+    "testsRegistered": 8,
+    "passPercent": 75,
+    "pendingPercent": 25,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2023-06-15T17:12:35.122Z",
+    "end": "2023-06-15T17:13:41.349Z",
+    "duration": 66227
+  },
+  "results": [
+    {
+      "uuid": "9436e294-b8c4-4730-8c24-4af3bb67f392",
+      "title": "",
+      "fullFile": "cypress/e2e/order.cy.js",
+      "file": "cypress/e2e/order.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Order",
+          "fullTitle": "Order",
+          "timedOut": null,
+          "duration": 8203,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "(0, _helper.login)(_user.default);\ncy.get('#filter_keyword').type('i').closest(\"form\").submit();\n//findNewProd('Gucci Guilty') //Benefit Bella Bamba\n(0, _helper.findProduct)('Benefit Bella Bamba'); //Benefit Bella Bamba\ncy.get('.productpagecart').click();\ncy.get('#cart_checkout1').click();\ncy.get('#checkout_btn').click();\ncy.get('.contentpanel').should('contain', \"Thank you for shopping with us!\");",
+          "err": {},
+          "uuid": "28e2b51b-5938-4355-ae36-116349ae849e",
+          "parentUUID": "9436e294-b8c4-4730-8c24-4af3bb67f392",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "28e2b51b-5938-4355-ae36-116349ae849e"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 8203,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "456b3013-8d94-4d14-9bfe-67aaacd2b651",
+      "title": "",
+      "fullFile": "cypress/e2e/registration.cy.js",
+      "file": "cypress/e2e/registration.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Registration",
+          "fullTitle": "Registration",
+          "timedOut": null,
+          "duration": 10370,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('/');\ncy.get('.topnavbar [data-id=\"menu_account\"]').click();\ncy.get('#accountFrm button').click();\ncy.get('#AccountFrm_firstname').type(_user.default.firstName);\ncy.get('#AccountFrm_lastname').type(_user.default.lastName);\ncy.get('#AccountFrm_email').type(_user.default.email);\ncy.get('#AccountFrm_address_1').type(_user.default.address);\ncy.get('#AccountFrm_city').type(_user.default.city);\ncy.get('#AccountFrm_postcode').type(_user.default.postCode);\ncy.get('#AccountFrm_country_id').select(_user.default.countryId);\ncy.get('#AccountFrm_loginname').type(_user.default.username);\ncy.get('#AccountFrm_password').type(_user.default.password);\ncy.get('#AccountFrm_confirm').type(_user.default.password);\ncy.get('#AccountFrm_zone_id').select(_user.default.zone);\ncy.get('#AccountFrm_newsletter0').check();\ncy.get('#AccountFrm_agree').check();\ncy.get('button[title=\"Continue\"]').click();\ncy.get('#maincontainer').contains(_user.default.firstName).should('exist');\ncy.clearAllCookies();\n//login(user);\ncy.login(_user.default);",
+          "err": {},
+          "uuid": "167748c2-ca1b-4ab2-a5cf-4e7873da2883",
+          "parentUUID": "456b3013-8d94-4d14-9bfe-67aaacd2b651",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Authorization",
+          "fullTitle": "Authorization",
+          "timedOut": null,
+          "duration": 0,
+          "state": "pending",
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": true,
+          "context": null,
+          "code": "cy.log('Open website login page');\ncy.visit('/index.php?rt=account/login');\ncy.log('Check user is unauthorized');\ncy.getCookie('customer').should('be.null');\ncy.log('Authorize user');\ncy.get('#loginFrm_loginname').type(_user.default.username);\ncy.get('#loginFrm_password').type(_user.default.password);\ncy.get('button[type=\"submit\"]').contains('Login').click();",
+          "err": {},
+          "uuid": "6fbea12d-8646-47d9-8e78-25ace1bfb5f6",
+          "parentUUID": "456b3013-8d94-4d14-9bfe-67aaacd2b651",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "167748c2-ca1b-4ab2-a5cf-4e7873da2883"
+      ],
+      "failures": [],
+      "pending": [
+        "6fbea12d-8646-47d9-8e78-25ace1bfb5f6"
+      ],
+      "skipped": [],
+      "duration": 10370,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bc47c81c-e62f-4590-a30f-07bdd0983e76",
+      "title": "",
+      "fullFile": "cypress/e2e/authorization.cy.js",
+      "file": "cypress/e2e/authorization.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Authorization",
+          "fullTitle": "Authorization",
+          "timedOut": null,
+          "duration": 3484,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_HomePage.default.visit();\n_HomePage.default.getLoginOrRegisterButton().click();\n_LoginPage.default.submitLoginForm(_user.default.username, _user.default.password);",
+          "err": {},
+          "uuid": "fe82bed1-b6de-4979-91b4-ece089aa74ce",
+          "parentUUID": "bc47c81c-e62f-4590-a30f-07bdd0983e76",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "fe82bed1-b6de-4979-91b4-ece089aa74ce"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 3484,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "9753b151-5e64-4e0c-8ee3-320011c1a4ca",
+      "title": "",
+      "fullFile": "cypress/e2e/order.cy.js",
+      "file": "cypress/e2e/order.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Order",
+          "fullTitle": "Order",
+          "timedOut": null,
+          "duration": 8857,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "(0, _helper.login)(_user.default);\ncy.get('#filter_keyword').type('i').closest(\"form\").submit();\n//findNewProd('Gucci Guilty') //Benefit Bella Bamba\n(0, _helper.findProduct)('Benefit Bella Bamba'); //Benefit Bella Bamba\ncy.get('.productpagecart').click();\ncy.get('#cart_checkout1').click();\ncy.get('#checkout_btn').click();\ncy.get('.contentpanel').should('contain', \"Thank you for shopping with us!\");",
+          "err": {},
+          "uuid": "7441299a-2807-441b-ac74-1107b0d65ad5",
+          "parentUUID": "9753b151-5e64-4e0c-8ee3-320011c1a4ca",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "7441299a-2807-441b-ac74-1107b0d65ad5"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 8857,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "d5f80ab8-a570-4366-8f5c-d386dece233f",
+      "title": "",
+      "fullFile": "cypress/e2e/registration.cy.js",
+      "file": "cypress/e2e/registration.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Registration",
+          "fullTitle": "Registration",
+          "timedOut": null,
+          "duration": 7456,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('/');\ncy.get('.topnavbar [data-id=\"menu_account\"]').click();\ncy.get('#accountFrm button').click();\ncy.get('#AccountFrm_firstname').type(_user.default.firstName);\ncy.get('#AccountFrm_lastname').type(_user.default.lastName);\ncy.get('#AccountFrm_email').type(_user.default.email);\ncy.get('#AccountFrm_address_1').type(_user.default.address);\ncy.get('#AccountFrm_city').type(_user.default.city);\ncy.get('#AccountFrm_postcode').type(_user.default.postCode);\ncy.get('#AccountFrm_country_id').select(_user.default.countryId);\ncy.get('#AccountFrm_loginname').type(_user.default.username);\ncy.get('#AccountFrm_password').type(_user.default.password);\ncy.get('#AccountFrm_confirm').type(_user.default.password);\ncy.get('#AccountFrm_zone_id').select(_user.default.zone);\ncy.get('#AccountFrm_newsletter0').check();\ncy.get('#AccountFrm_agree').check();\ncy.get('button[title=\"Continue\"]').click();\ncy.get('#maincontainer').contains(_user.default.firstName).should('exist');\ncy.clearAllCookies();\n//login(user);\ncy.login(_user.default);",
+          "err": {},
+          "uuid": "7bbab858-333f-4499-9833-7bc3ff9b5b2c",
+          "parentUUID": "d5f80ab8-a570-4366-8f5c-d386dece233f",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Authorization",
+          "fullTitle": "Authorization",
+          "timedOut": null,
+          "duration": 0,
+          "state": "pending",
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": true,
+          "context": null,
+          "code": "cy.log('Open website login page');\ncy.visit('/index.php?rt=account/login');\ncy.log('Check user is unauthorized');\ncy.getCookie('customer').should('be.null');\ncy.log('Authorize user');\ncy.get('#loginFrm_loginname').type(_user.default.username);\ncy.get('#loginFrm_password').type(_user.default.password);\ncy.get('button[type=\"submit\"]').contains('Login').click();",
+          "err": {},
+          "uuid": "a9e225dc-4a60-4a60-a4ba-280c8d47f00a",
+          "parentUUID": "d5f80ab8-a570-4366-8f5c-d386dece233f",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "7bbab858-333f-4499-9833-7bc3ff9b5b2c"
+      ],
+      "failures": [],
+      "pending": [
+        "a9e225dc-4a60-4a60-a4ba-280c8d47f00a"
+      ],
+      "skipped": [],
+      "duration": 7456,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e7684ad6-8d1a-4340-adac-305991e9dd6a",
+      "title": "",
+      "fullFile": "cypress/e2e/authorization.cy.js",
+      "file": "cypress/e2e/authorization.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Authorization",
+          "fullTitle": "Authorization",
+          "timedOut": null,
+          "duration": 3419,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_HomePage.default.visit();\n_HomePage.default.getLoginOrRegisterButton().click();\n_LoginPage.default.submitLoginForm(_user.default.username, _user.default.password);",
+          "err": {},
+          "uuid": "066f616d-f2b1-476f-9a25-94fa0ecafd3b",
+          "parentUUID": "e7684ad6-8d1a-4340-adac-305991e9dd6a",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "066f616d-f2b1-476f-9a25-94fa0ecafd3b"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 3419,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
