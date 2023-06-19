@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 1,
     "failures": 0,
-    "start": "2023-06-15T17:12:54.704Z",
-    "end": "2023-06-15T17:13:05.095Z",
-    "duration": 10391,
+    "start": "2023-06-15T18:26:02.166Z",
+    "end": "2023-06-15T18:26:10.956Z",
+    "duration": 8790,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 50,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "456b3013-8d94-4d14-9bfe-67aaacd2b651",
+      "uuid": "dd29e676-cfce-4c8d-b104-70dd619a1b36",
       "title": "",
       "fullFile": "cypress/e2e/registration.cy.js",
       "file": "cypress/e2e/registration.cy.js",
@@ -29,17 +29,17 @@
           "title": "Registration",
           "fullTitle": "Registration",
           "timedOut": null,
-          "duration": 10370,
+          "duration": 8745,
           "state": "passed",
-          "speed": "slow",
+          "speed": "medium",
           "pass": true,
           "fail": false,
           "pending": false,
           "context": null,
           "code": "cy.visit('/');\ncy.get('.topnavbar [data-id=\"menu_account\"]').click();\ncy.get('#accountFrm button').click();\ncy.get('#AccountFrm_firstname').type(_user.default.firstName);\ncy.get('#AccountFrm_lastname').type(_user.default.lastName);\ncy.get('#AccountFrm_email').type(_user.default.email);\ncy.get('#AccountFrm_address_1').type(_user.default.address);\ncy.get('#AccountFrm_city').type(_user.default.city);\ncy.get('#AccountFrm_postcode').type(_user.default.postCode);\ncy.get('#AccountFrm_country_id').select(_user.default.countryId);\ncy.get('#AccountFrm_loginname').type(_user.default.username);\ncy.get('#AccountFrm_password').type(_user.default.password);\ncy.get('#AccountFrm_confirm').type(_user.default.password);\ncy.get('#AccountFrm_zone_id').select(_user.default.zone);\ncy.get('#AccountFrm_newsletter0').check();\ncy.get('#AccountFrm_agree').check();\ncy.get('button[title=\"Continue\"]').click();\ncy.get('#maincontainer').contains(_user.default.firstName).should('exist');\ncy.clearAllCookies();\n//login(user);\ncy.login(_user.default);",
           "err": {},
-          "uuid": "167748c2-ca1b-4ab2-a5cf-4e7873da2883",
-          "parentUUID": "456b3013-8d94-4d14-9bfe-67aaacd2b651",
+          "uuid": "ceb4c3f1-c108-45c3-84d5-e8f46457f2be",
+          "parentUUID": "dd29e676-cfce-4c8d-b104-70dd619a1b36",
           "isHook": false,
           "skipped": false
         },
@@ -56,22 +56,22 @@
           "context": null,
           "code": "cy.log('Open website login page');\ncy.visit('/index.php?rt=account/login');\ncy.log('Check user is unauthorized');\ncy.getCookie('customer').should('be.null');\ncy.log('Authorize user');\ncy.get('#loginFrm_loginname').type(_user.default.username);\ncy.get('#loginFrm_password').type(_user.default.password);\ncy.get('button[type=\"submit\"]').contains('Login').click();",
           "err": {},
-          "uuid": "6fbea12d-8646-47d9-8e78-25ace1bfb5f6",
-          "parentUUID": "456b3013-8d94-4d14-9bfe-67aaacd2b651",
+          "uuid": "2df94a62-0cb3-4e64-a5ca-1d9222ca23f8",
+          "parentUUID": "dd29e676-cfce-4c8d-b104-70dd619a1b36",
           "isHook": false,
           "skipped": false
         }
       ],
       "suites": [],
       "passes": [
-        "167748c2-ca1b-4ab2-a5cf-4e7873da2883"
+        "ceb4c3f1-c108-45c3-84d5-e8f46457f2be"
       ],
       "failures": [],
       "pending": [
-        "6fbea12d-8646-47d9-8e78-25ace1bfb5f6"
+        "2df94a62-0cb3-4e64-a5ca-1d9222ca23f8"
       ],
       "skipped": [],
-      "duration": 10370,
+      "duration": 8745,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000

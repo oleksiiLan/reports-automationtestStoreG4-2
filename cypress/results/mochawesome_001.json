@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-06-15T17:12:41.363Z",
-    "end": "2023-06-15T17:12:49.581Z",
-    "duration": 8218,
+    "start": "2023-06-15T18:25:45.451Z",
+    "end": "2023-06-15T18:25:56.510Z",
+    "duration": 11059,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9436e294-b8c4-4730-8c24-4af3bb67f392",
+      "uuid": "a42849fd-b9ae-4f88-ac98-2b40148a5fe2",
       "title": "",
       "fullFile": "cypress/e2e/order.cy.js",
       "file": "cypress/e2e/order.cy.js",
@@ -29,29 +29,29 @@
           "title": "Order",
           "fullTitle": "Order",
           "timedOut": null,
-          "duration": 8203,
+          "duration": 11041,
           "state": "passed",
-          "speed": "medium",
+          "speed": "slow",
           "pass": true,
           "fail": false,
           "pending": false,
           "context": null,
           "code": "(0, _helper.login)(_user.default);\ncy.get('#filter_keyword').type('i').closest(\"form\").submit();\n//findNewProd('Gucci Guilty') //Benefit Bella Bamba\n(0, _helper.findProduct)('Benefit Bella Bamba'); //Benefit Bella Bamba\ncy.get('.productpagecart').click();\ncy.get('#cart_checkout1').click();\ncy.get('#checkout_btn').click();\ncy.get('.contentpanel').should('contain', \"Thank you for shopping with us!\");",
           "err": {},
-          "uuid": "28e2b51b-5938-4355-ae36-116349ae849e",
-          "parentUUID": "9436e294-b8c4-4730-8c24-4af3bb67f392",
+          "uuid": "733e2a6b-d324-4379-b21d-3c6999876bb9",
+          "parentUUID": "a42849fd-b9ae-4f88-ac98-2b40148a5fe2",
           "isHook": false,
           "skipped": false
         }
       ],
       "suites": [],
       "passes": [
-        "28e2b51b-5938-4355-ae36-116349ae849e"
+        "733e2a6b-d324-4379-b21d-3c6999876bb9"
       ],
       "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 8203,
+      "duration": 11041,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000

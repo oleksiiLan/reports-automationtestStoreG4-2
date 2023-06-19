@@ -7,3 +7,5 @@ it('Authorization', {retries: 2}, () => {
   homePage.getLoginOrRegisterButton().click();
   loginPage.submitLoginForm(user.username, user.password);
 })
+
+

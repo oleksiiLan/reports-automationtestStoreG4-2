@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-06-15T17:12:35.122Z",
-    "end": "2023-06-15T17:12:38.556Z",
-    "duration": 3434,
+    "start": "2023-06-15T18:25:38.793Z",
+    "end": "2023-06-15T18:25:42.281Z",
+    "duration": 3488,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e7684ad6-8d1a-4340-adac-305991e9dd6a",
+      "uuid": "310310ed-702f-4b55-8465-b7c167f20b8f",
       "title": "",
       "fullFile": "cypress/e2e/authorization.cy.js",
       "file": "cypress/e2e/authorization.cy.js",
@@ -29,7 +29,7 @@
           "title": "Authorization",
           "fullTitle": "Authorization",
           "timedOut": null,
-          "duration": 3419,
+          "duration": 3457,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -38,20 +38,20 @@
           "context": null,
           "code": "_HomePage.default.visit();\n_HomePage.default.getLoginOrRegisterButton().click();\n_LoginPage.default.submitLoginForm(_user.default.username, _user.default.password);",
           "err": {},
-          "uuid": "066f616d-f2b1-476f-9a25-94fa0ecafd3b",
-          "parentUUID": "e7684ad6-8d1a-4340-adac-305991e9dd6a",
+          "uuid": "6cffffa7-fd68-47f2-9323-0f3289620799",
+          "parentUUID": "310310ed-702f-4b55-8465-b7c167f20b8f",
           "isHook": false,
           "skipped": false
         }
       ],
       "suites": [],
       "passes": [
-        "066f616d-f2b1-476f-9a25-94fa0ecafd3b"
+        "6cffffa7-fd68-47f2-9323-0f3289620799"
       ],
       "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 3419,
+      "duration": 3457,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000

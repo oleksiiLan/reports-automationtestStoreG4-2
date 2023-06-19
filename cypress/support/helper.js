@@ -11,23 +11,23 @@ export function login(qweqwe) {
     cy.get('button[type="submit"]').contains('Login').click();
 }
 
-export function findNewProd(productName){
-    cy.get('ul.pagination a').then( pages => {
-        for(let i = 1; i < pages.length; i++){
-            cy.location().then( location => {
-                if(!location.search.includes('product/product')){
-                    cy.get('body').then( body => {
-                        if(body.find(`.prdocutname[title="${productName}"]`).length > 0){
-                            cy.get(`.prdocutname[title="${productName}"]`).click();
-                        } else {
-                            cy.get('ul.pagination a').contains('>').click();
-                        }
-                    })
-                }
-            })
-        }
-    })
-}
+// export function findNewProd(productName){
+//     cy.get('ul.pagination a').then( pages => {
+//         for(let i = 1; i < pages.length; i++){
+//             cy.location().then( location => {
+//                 if(!location.search.includes('product/product')){
+//                     cy.get('body').then( body => {
+//                         if(body.find(`.prdocutname[title="${productName}"]`).length > 0){
+//                             cy.get(`.prdocutname[title="${productName}"]`).click();
+//                         } else {
+//                             cy.get('ul.pagination a').contains('>').click();
+//                         }
+//                     })
+//                 }
+//             })
+//         }
+//     })
+// }
 
 export function findProduct(productName){
     cy.get('body').then( body => {
@@ -39,3 +39,32 @@ export function findProduct(productName){
         }
     })
 }
+
+export function loginViaApi(user) {
+    let requestBody = new FormData();
+  
+    requestBody.loginname = user.username;
+    requestBody.password = user.password;
+  
+    // дістати з html get (значення)
+    cy.request({
+        method: 'POST',
+        url: "/index.php?rt=account/login", 
+        body: requestBody, 
+        failOnStatusCode: false
+    }).then((response) => {
+      expect(response.isOkStatusCode).to.be.true;
+  
+      let token = response.body.csrftoken;
+      let instance = response.body.csrfinstance;
+  
+      formData.loginname = user.username;
+      formData.password = user.password;
+      formData.csrftoken = token;
+      formData.csrfinstance = instance;
+  
+
+      //засетати в localStorage
+      //window.localStorage.setItem("user", JSON.stringify(sessionData));
+    });
+  }
