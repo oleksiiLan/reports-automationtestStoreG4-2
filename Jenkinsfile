@@ -12,13 +12,13 @@ pipeline{
         }
         stage('Cypress run') { 
             steps {
-                sh 'allure:clearData'
-                sh 'cy:testWithAllureReport'
+                sh 'npm run allure:clearData'
+                sh 'npm run cy:testWithAllureReport'
             }
         }
         stage('Generate Allure report') { 
             steps {
-                sh 'allure:generateReport'
+                sh 'npm run allure:generateReport'
                 allure(
                     results: [['allure-results']]
                 )
