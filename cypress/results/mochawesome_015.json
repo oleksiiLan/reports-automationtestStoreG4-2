@@ -1,0 +1,86 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-20T18:17:33.292Z",
+    "end": "2023-06-20T18:17:36.378Z",
+    "duration": 3086,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7d499e4a-c6ee-4321-b4f3-5d8447d2835d",
+      "title": "",
+      "fullFile": "cypress/e2e/authorization.cy.js",
+      "file": "cypress/e2e/authorization.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Authorization",
+          "fullTitle": "Authorization",
+          "timedOut": null,
+          "duration": 3068,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "_HomePage.default.visit();\n_HomePage.default.getLoginOrRegisterButton().click();\n_LoginPage.default.submitLoginForm(_user.default.username, _user.default.password);",
+          "err": {},
+          "uuid": "16b07e22-51b1-4aab-8115-43aac3a789e9",
+          "parentUUID": "7d499e4a-c6ee-4321-b4f3-5d8447d2835d",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "16b07e22-51b1-4aab-8115-43aac3a789e9"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 3068,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
