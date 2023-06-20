@@ -16,10 +16,10 @@ class LoginPage {
         return cy.get('button[title="Login"]');
     }
 
-    submitLoginForm(username, password){
-        cy.log(`Auth user with username: ${username} and pass: ${password}`);
+    submitLoginForm(loginname, password){
+        cy.log(`Auth user with username: ${loginname} and pass: ${password}`);
 
-        this.getLoginField().type(username)
+        this.getLoginField().type(loginname)
         this.getPasswordField().type(password)
         this.getSubmitButton().click()
     }
